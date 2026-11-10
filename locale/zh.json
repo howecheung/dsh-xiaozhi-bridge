@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "小智桥接",
+    "description": "把本机 DeepSeek Harness 以 MCP 工具形式发布到小智 MCP 接入点，让使用小智接入点的机器人（如 StackChan）用语音驱动桌面 AI。"
+  }
+}

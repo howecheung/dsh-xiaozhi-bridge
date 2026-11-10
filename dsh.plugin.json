@@ -1,0 +1,18 @@
+{
+  "id": "dsh-xiaozhi-bridge",
+  "version": "0.1.0",
+  "main": "./index.js",
+  "description": "Bridge a Xiaozhi MCP endpoint to the local DeepSeek Harness agent, with a service switch and auto-start toggle.",
+  "engines": {
+    "dsh": ">=0.1.0-rc.6"
+  },
+  "contributes": {
+    "tools": [
+      "xiaozhi_bridge_status",
+      "xiaozhi_bridge_reconnect",
+      "xiaozhi_bridge_set_service",
+      "xiaozhi_bridge_set_autostart"
+    ],
+    "skills": []
+  }
+}

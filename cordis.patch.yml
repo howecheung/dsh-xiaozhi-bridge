@@ -1,0 +1,4 @@
+- insert:
+    - id: xiaozhi-bridge
+      name: dsh-xiaozhi-bridge
+      config: {}

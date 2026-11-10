@@ -1,0 +1,76 @@
+{
+  "name": "dsh-xiaozhi-bridge",
+  "version": "0.1.0",
+  "description": "Expose the local DeepSeek Harness agent as MCP tools on a Xiaozhi MCP endpoint, so voice-controlled robots (e.g. StackChan) can drive the desktop AI.",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client/client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client/*.js",
+    "lib/*.js",
+    "cordis.patch.yml",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "README.en.md",
+    "LICENSE",
+    "dsh.plugin.json"
+  ],
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1"
+  },
+  "peerDependenciesMeta": {
+    "@deepseek-ai/cordis": {
+      "optional": true
+    }
+  },
+  "engines": {
+    "node": ">=22",
+    "dsh": ">=0.1.0-rc.6"
+  },
+  "license": "MIT",
+  "keywords": [
+    "deepseek-harness",
+    "dsh",
+    "dsh-plugin",
+    "xiaozhi",
+    "mcp",
+    "robot",
+    "voice",
+    "stackchan"
+  ],
+  "author": "howecheung",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-client-ui-settings",
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/howecheung/dsh-xiaozhi-bridge.git"
+  },
+  "bugs": {
+    "url": "https://github.com/howecheung/dsh-xiaozhi-bridge/issues"
+  },
+  "homepage": "https://github.com/howecheung/dsh-xiaozhi-bridge",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}

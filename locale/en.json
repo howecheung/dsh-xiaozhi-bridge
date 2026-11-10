@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Xiaozhi Bridge",
+    "description": "Exposes the local DeepSeek Harness agent as MCP tools on a Xiaozhi MCP endpoint, so robots using that endpoint (e.g. StackChan) can drive the desktop AI by voice."
+  }
+}
