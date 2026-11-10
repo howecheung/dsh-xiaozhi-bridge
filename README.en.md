@@ -118,20 +118,28 @@ inlined equivalents of the upstream implementation.
 
 ## Install
 
-### From GitHub
+### Plugin manager (recommended)
+
+In the desktop app, open the sidebar **Plugins** page and add a bundle with one of these specs:
+
+- GitHub source: `github:howecheung/dsh-xiaozhi-bridge`
+- npm (once published): `dsh-xiaozhi-bridge`
+
+The desktop profile is owned by the Electron app, so `dsh plugin --profile desktop ...` is
+refused there. Use the Plugins page instead.
+
+### From the command line (CLI-managed profiles, e.g. `dsh web`)
 
 ```powershell
-dsh plugin --profile desktop add github:howecheung/dsh-xiaozhi-bridge
+dsh plugin --profile web add github:howecheung/dsh-xiaozhi-bridge
 ```
 
-### From npm (once published)
-
 ```powershell
-dsh plugin --profile desktop add dsh-xiaozhi-bridge
+dsh plugin --profile web add dsh-xiaozhi-bridge   # once published to npm
 ```
 
 Fully quit the desktop app (right-click the tray icon → quit) and start it again for the plugin
-to load. Use `dsh plugin --profile desktop list` to check the installation.
+to load.
 
 ## Requirements
 

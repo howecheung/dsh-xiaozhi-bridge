@@ -114,20 +114,27 @@ ctx.agents.create(...) → agent.followup(createUserMessage(...))
 
 ## 安装
 
-### 从 GitHub 安装
+### 插件管理面板（推荐）
+
+桌面版左侧栏「**插件**」→ 添加组合包，填入下列任一来源：
+
+- GitHub 源：`github:howecheung/dsh-xiaozhi-bridge`
+- npm 源（发布后）：`dsh-xiaozhi-bridge`
+
+> 桌面版的 profile 由桌面应用自身独占管理，命令行 `dsh plugin --profile desktop ...` 会被拒绝，
+> 请用「插件」面板安装。
+
+### 命令行（CLI 管理的 profile，例如 `dsh web`）
 
 ```powershell
-dsh plugin --profile desktop add github:howecheung/dsh-xiaozhi-bridge
+dsh plugin --profile web add github:howecheung/dsh-xiaozhi-bridge
 ```
 
-### 从 npm 安装（发布后）
-
 ```powershell
-dsh plugin --profile desktop add dsh-xiaozhi-bridge
+dsh plugin --profile web add dsh-xiaozhi-bridge   # npm 发布后可用
 ```
 
 安装后需**完全退出桌面版**（托盘图标右键退出）再启动，插件才会加载。
-可用 `dsh plugin --profile desktop list` 查看是否已安装。
 
 ## 环境要求
 
