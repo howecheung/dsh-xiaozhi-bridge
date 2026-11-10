@@ -592,7 +592,7 @@ window.__ModuleLoader__.load({
                     setForm(function (prev) {
                       return { ...prev, cwd: value }
                     })
-                  }, { placeholder: 'D:\\AI Agent\\DeepSeek workplace' }),
+                  }, { placeholder: 'C:\\workspace\\agent' }),
                 ),
                 field(
                   t('timeout'),
